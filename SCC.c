@@ -78,6 +78,7 @@ void StronglyConnectedComponents( Graph G, void (*visit)(Vertex V) ) {
             findSCC(i, G, sccRef);
             for (int i = 0; i < vertexCnt; i ++) {
                 if (sccRef[i]) {
+                    includeList[i] = 1;
                     (*visit)(i);
                 }
             }
